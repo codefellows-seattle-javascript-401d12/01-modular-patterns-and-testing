@@ -9,3 +9,5 @@ describe('Greet Module', function() {
       var result = greet.sayHey('Jinho');
       assert.ok(result === 'hey Jinho!', 'not equal to hey Jinho!');
     });
+  });
+});
