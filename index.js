@@ -1,6 +1,7 @@
 'use strict';
 
 const greet = require('./lib/greet.js');
+let name = process.argv[2];
 
-greet.sayHey('jonny');
-greet.sayBye('jonny');
+greet.sayHey(name);
+greet.sayBye(name);

@@ -2,11 +2,14 @@
 
 const greet = require('../lib/greet.js');
 const assert = require('assert');
+let name = process.argv[2];
+
+if(name === undefined) name = 'jonny';
 
 describe('Test greet file', function() {
   describe('#sayHey', function() {
     it('should return what\'s up {name}', function() {
-      assert.ok(greet.sayHey('jonny') === 'what\'s up jonny!', 'sayHey function does not return what\'s up jonny');
+      assert.ok(greet.sayHey(name) === `what\'s up ${name}!`, `sayHey function does not return what\'s up ${name}`);
     });
     it('should return missing name error', function() {
       assert.throws(function() {
@@ -16,7 +19,7 @@ describe('Test greet file', function() {
   });
   describe('#sayBye', function() {
     it('should return see ya later {name}', function() {
-      assert.ok(greet.sayBye('jonny') === 'See ya later jonny!', 'sayBye function does not return see ya later jonny!');
+      assert.ok(greet.sayBye(name) === `See ya later ${name}!`, `sayBye function does not return see ya later ${name}!`);
     });
     it('should return missing name error', function(){
       assert.throws(function() {
