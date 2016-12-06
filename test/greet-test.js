@@ -6,7 +6,7 @@ const assert = require('assert');
 describe('Greet Test Module', function () {
   describe('#greet', function () {
     //pointing back to run sayHello function
-    it('should return hello erick!', function () {
+    it(`should return hello ${process.argv[2]}!`, function () {
       var result = greet.greet(process.argv[2]);
       //creating variable that stores value of sayHello
       assert.ok(result === `hello ${process.argv[2]}!`, `not equal to hello ${result}!`);
