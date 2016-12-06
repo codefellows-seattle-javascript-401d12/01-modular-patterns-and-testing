@@ -2,5 +2,6 @@
 
 const greet = require('./lib/greet.js');
 
-greet.greet('danny');
+greet.greet(process.argv[2]);
+// greet.greet('danny');
 greet.favPlace();

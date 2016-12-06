@@ -5,9 +5,11 @@ const assert = require('assert');
 
 describe('Greet Module', function() {
   describe('#greet', function () {
-    it('should return hello danny', function() {
-      var result = greet.greet('danny');
-      assert.ok(result === 'hello danny', 'not equal to hello! danny');
+    it('should return "hello <name>"', function() {
+      // var result = greet.greet('danny');
+      var result = greet.greet(process.argv[2]);
+      // assert.ok(result === 'hello danny', 'not equal to hello! danny');
+      assert.ok(result === `hello ${process.argv[2]}`, 'not equal to hello! name');
     });
     it('should throw a missing name error', function() {
       assert.throws(function() {
