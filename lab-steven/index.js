@@ -2,4 +2,4 @@
 
 const greet = require('./lib/greet.js');
 
-greet.greet('Steven');
+greet.greet(process.argv[2]);
